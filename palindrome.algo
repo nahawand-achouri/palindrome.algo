@@ -1,0 +1,19 @@
+FUNCTION palyndrome (str: STRING) : BOOLEAN
+VAR
+ left , right : INTEGER;
+BEGIN
+    left := 0;
+    right := str.length -1 ;
+
+    IF (str.length = 1 or str.length = 0) THEN
+        return true
+    END_IF
+
+    IF (str[left] = str[right]) THEN
+        return palyndrome(str[left+1,right -1 ])
+    ELSE
+        return false
+    END_IF
+   
+END
+    
